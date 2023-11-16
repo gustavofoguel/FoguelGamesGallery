@@ -57,6 +57,24 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiImage Remove="Resources\Images\NintendoSwitch.png" />
+	  <MauiImage Remove="Resources\Images\Playstation5.png" />
+	  <MauiImage Remove="Resources\Images\XboxSeriesX.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Images\NintendoSwitch.png" />
+	  <None Remove="Resources\Images\Playstation5.png" />
+	  <None Remove="Resources\Images\XboxSeriesX.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="Resources\Images\NintendoSwitch.png" />
+	  <EmbeddedResource Include="Resources\Images\Playstation5.png" />
+	  <EmbeddedResource Include="Resources\Images\XboxSeriesX.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />

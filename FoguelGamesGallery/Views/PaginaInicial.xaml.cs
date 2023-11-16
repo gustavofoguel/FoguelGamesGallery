@@ -18,7 +18,7 @@ public partial class PaginaInicial : ContentPage
 
 		//Animação dos consoles
 		parentAnimation.Add(0, 0.2, new Animation(v => imgPlaystation5.Opacity = v, 0, 1, Easing.CubicIn));
-		parentAnimation.Add(0.1, 0.3, new Animation(v => imgXboxSerieX.Opacity = v, 0, 1, Easing.CubicIn));
+		parentAnimation.Add(0.1, 0.3, new Animation(v => imgXboxSeriesX.Opacity = v, 0, 1, Easing.CubicIn));
 		parentAnimation.Add(0.2, 0.4, new Animation(v => imgNintendoSwitch.Opacity = v, 0, 1, Easing.CubicIn));
 
 		// Animação da caixa de introdução

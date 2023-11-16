@@ -4,11 +4,187 @@
              xmlns:local="clr-namespace:FoguelGamesGallery"
              x:Class="FoguelGamesGallery.App">
     <Application.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
-                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
+        
+        <!--Cores-->
+        <Color x:Key="PageBackGround">#191932</Color>
+        <Color x:Key="FrameBackgroundColor">black</Color>
+        <Color x:Key="ButtonBackgroundColor">#e57904</Color>
+        <Color x:Key="BorderColor">Transparent</Color>
+        <Color x:Key="LightBorderColor">#d5d5d5</Color>
+        <Color x:Key="LightTextColor">#d5d5d5</Color>
+        <Color x:Key="DarkTextColor">white</Color>
+        
+        <!--Estilos para paginas de Conteudo XAML-->
+        <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
+            <Setter Property="NavigationPage.HasNavigationBar" Value="False" />
+            <Setter Property="BackgroundColor" Value="{StaticResource PageBackGround}" />
+            <Setter Property="Padding" Value="0"/>
+        </Style>
+        
+        <!--Pagina de Navegação-->
+        <Style TargetType="NavigationPage" ApplyToDerivedTypes="True">
+            <Setter Property="BackgroundColor" Value="{StaticResource PageBackGround}" />
+        </Style>
+        
+        <!--Estilos de Grid-->
+        <Style TargetType="Grid">
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="RowSpacing" Value="0"/>
+            <Setter Property="ColumnSpacing" Value="0"/>
+            <Setter Property="VerticalOptions" Value="Fill"/>
+            <Setter Property="HorizontalOptions" Value="Fill"/>
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+        </Style>
+        
+        <!--Estilos de visualização de coleção-->
+        <Style TargetType="CollectionView" ApplyToDerivedTypes="True">
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="ItemSizingStrategy" Value="MeasureFirstItem"/>
+            <Setter Property="VerticalOptions" Value="Fill"/>
+            <Setter Property="HorizontalOptions" Value="Fill"/>
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+            <Setter Property="VerticalScrollBarVisibility" Value="Never"/>
+            <Setter Property="HorizontalScrollBarVisibility" Value="Never"/>
+            <Setter Property="SelectionMode" Value="None"/>
+        </Style>
+        
+        <!--Estilos de Icones-->
+        <Style TargetType="ImageButton" x:Key="IconButtonStyle">
+            <Setter Property="HeightRequest" Value="32"/>
+            <Setter Property="WidthRequest" Value="32"/>
+            <Setter Property="Padding" Value="32"/>
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="Aspect" Value="AspectFit"/>
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="Opacity" Value="1"/>
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Disable">
+                            <VisualState.Setters>
+                                <Setter Property="Opacity" Value="0.5"/>
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+        
+        <!--Estilo de botões-->
+        <Style TargetType="Button" x:Key="ButtonStyle">
+            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="HeightRequest" Value="52"/>
+            <Setter Property="Padding" Value="64,0"/>
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="FontFamily" Value="MediumFont"/>
+            <Setter Property="CornerRadius" Value="26" />
+            <Setter Property="BackgroundColor" Value="{StaticResource ButtonBackgroundColor}" />
+            <Setter Property="BorderWidth" Value="0" />
+            <Setter Property="BorderColor" Value="{StaticResource BorderColor}"/>
+        </Style>
+        
+        <!--Label Style-->
+        <Style TargetType="Label" x:Key="BaseBoldLabeltyle">
+            <Setter Property="LineBreakMode" Value="TailTruncation"/>
+            <Setter Property="FontAutoScalingEnabled" Value="False"/>
+            <Setter Property="FontFamily" Value="BoldFont"/>
+        </Style>
+
+        <Style TargetType="Label" x:Key="BaseMediumLabeltyle">
+            <Setter Property="LineBreakMode" Value="TailTruncation" />
+            <Setter Property="FontAutoScalingEnabled" Value="False" />
+            <Setter Property="FontFamily" Value="MediumFont" />
+        </Style>
+
+        <Style TargetType="Label" x:Key="BaseRegularLabeltyle">
+            <Setter Property="LineBreakMode" Value="TailTruncation" />
+            <Setter Property="FontAutoScalingEnabled" Value="False" />
+            <Setter Property="FontFamily" Value="RegularFont" />
+        </Style>
+
+        <Style TargetType="Label" x:Key="IntroPageHeaderStyle" BasedOn="{StaticResource
+            BaseBoldLabeltyle}">
+            <Setter Property="FontSize" Value="32" />
+            <Setter Property="TextColor" Value="{StaticResource DarkTextColor}" />
+        </Style>
+
+        <Style TargetType="Label" x:Key="IntroPageTextStyle" BasedOn="{StaticResource
+            BaseBoldLabeltyle}">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="LineHeight" Value="1.15" />
+            <Setter Property="TextColor" Value="{StaticResource DarkTextColor}" />
+        </Style>
+
+        <Style TargetType="Label" x:Key="PageHeaderStyle" BasedOn="{StaticResource
+            BaseBoldLabeltyle}">
+            <Setter Property="FontSize" Value="32"/>
+            <Setter Property="TextColor" Value="White"/>
+        </Style>
+
+        <Style TargetType="Label" x:Key="PageHeaderSubtitleStyle" BasedOn="{StaticResource
+            BaseBoldLabeltyle}">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
+        </Style>
+
+        <Style TargetType="Label" x:Key="PageSubHeaderStyle" BasedOn="{StaticResource
+            BaseBoldLabeltyle}">
+            <Setter Property="FontSize" Value="28" />
+            <Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
+        </Style>
+
+        <Style TargetType="Label" x:Key="FeaturedConsolesHeaderStyle" BasedOn="{StaticResource
+            BaseBoldLabeltyle}">
+            <Setter Property="FontSize" Value="22" />
+            <Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
+        </Style>
+
+        <Style TargetType="Label" x:Key="FeaturedConsoleHeaderSubtitleStyle" BasedOn="{StaticResource
+            BaseBoldLabeltyle}">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="TextColor" Value="{StaticResource LightTextColor}"/>
+        </Style>
+
+        <Style TargetType="Label" x:Key="AllConsolesHeaderStyle" BasedOn="{StaticResource
+            BaseBoldLabeltyle}">
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="TextColor" Value="{StaticResource LightTextColor}"/>
+        </Style>
+
+        <Style TargetType="Label" x:Key="AllConsolesHeaderSubtitleStyle" BasedOn="{StaticResource
+            BaseBoldLabeltyle}">
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
+        </Style>
+
+        <Style TargetType="Label" x:Key="MenuLabelStyle" BasedOn="{StaticResource
+            BaseBoldLabeltyle}">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="TextColor" Value="#CCCCCC" />
+        </Style>
+
+        <Style TargetType="Label" x:Key="ConsolesHeaderStyle" BasedOn="{StaticResource
+            BaseBoldLabeltyle}">
+            <Setter Property="FontSize" Value="48" />
+            <Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
+        </Style>
+
+        <Style TargetType="Label" x:Key="ConsolesHeaderSubtitleStyle" BasedOn="{StaticResource
+            BaseBoldLabeltyle}">
+            <Setter Property="FontSize" Value="22" />
+            <Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
+        </Style>
+
+        <Style TargetType="Label" x:Key="ConsolesDetailsTextStyle" BasedOn="{StaticResource
+            BaseBoldLabeltyle}">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
+        </Style>
+        
     </Application.Resources>
 </Application>
