@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FoguelGamesGallery.Views.PaginaDetalhesConsoles"
+             Title="PaginaDetalhesConsoles">
+    <Grid
+        Margin="24,52,24,0"
+        IgnoreSafeArea="{OnPlatform Android=False, iOS=True}"
+        ColumnDefinitions="*,*"
+        RowDefinitions="Auto,*">
+        
+        <!--Icone do cabeçalho-->
+        <ImageButton
+            WidthRequest="24"
+            HeightRequest="24"
+            Source="imgback.png"
+            Grid.Row="0"
+            Grid.Column="0"
+            HorizontalOptions="Start"
+            VerticalOptions="Center"
+            Clicked="BackButton_Clicked"/>
+
+        <ImageButton
+            WidthRequest="24"
+            HeightRequest="24"
+            Source="imgmenu.png"
+            Grid.Row="0"
+            Grid.Column="1"
+            HorizontalOptions="End"
+            VerticalOptions="Center"/>
+        
+        <!--Conteudo ScrollView-->
+        <ScrollView
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            HorizontalScrollBarVisibility="Never"
+            VerticalScrollBarVisibility="Never"
+            Margin="0,16,0,0">
+
+            <VerticalStackLayout
+                Spacing="18">
+                
+                <!--Console Imagem-->
+                <Image
+                    Source="{Binding HeroImage}"
+                    Aspect="AspectFit"
+                    HorizontalOptions="Fill"
+                    HeightRequest="240"
+                    Margin="24,0"/>
+                
+                <!--Console Nome-->
+                <Label
+                    Style="{StaticResource ConsolesHeaderStyle}"
+                    Text="{Binding Nome }"
+                    Margin="0, -24,0,0"/>
+                
+                <!--Console Legenda-->
+                <Label
+                    Margin="0,-12,0,0"
+                    Style="{StaticResource ConsolesHeaderSubtitleStyle}"
+                    Text="{Binding Legenda}"/>
+                
+                <!--Dvisor-->
+                <Rectangle
+                    HorizontalOptions="Fill"
+                    HeightRequest="2"
+                    Stroke="Transparent"
+                    Fill="{StaticResource LightBorderColor}"/>
+                
+                <!--Informação do Console-->
+                <Label
+                    Style="{StaticResource ConsolesDetailsTextStyle}"
+                    LineBreakMode="WordWrap"
+                    Text="{Binding Descricao }"/>
+                
+                <!--Divisor-->
+                <Rectangle
+                    HorizontalOptions="Fill"
+                    HeightRequest="2"
+                    Stroke="Transparent"
+                    Fill="{StaticResource LightBorderColor}"/>
+                
+                <!--Galeria de consoles-->
+                <Label
+                    Style="{StaticResource ConsolesHeaderSubtitleStyle}"
+                    Text="Galeria"/>
+
+                <CollectionView
+                    Margin="0,-6,0,0"
+                    HeightRequest="160"
+                    ItemsSource="{Binding Images}">
+
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout
+                            Orientation="Horizontal"
+                            ItemSpacing="16"/>
+                    </CollectionView.ItemsLayout>
+
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Image
+                                Source="{Binding .}"
+                                Aspect="AspectFill"
+                                HorizontalOptions="Fill"
+                                VerticalOptions="Fill"
+                                WidthRequest="160">
+                                <Image.Clip>
+                                    <RoundRectangleGeometry
+                                        Rect="0,0,160,160"
+                                        CornerRadius="16"/>
+                                </Image.Clip>
+                            </Image>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                    
+                </CollectionView>
+            </VerticalStackLayout>
+
+        </ScrollView>
+        
+        
+
+    </Grid>
+</ContentPage>

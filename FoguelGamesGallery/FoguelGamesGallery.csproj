@@ -57,21 +57,23 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiImage Remove="Resources\Images\imgback.png" />
+	  <MauiImage Remove="Resources\Images\imgexplore.png" />
+	  <MauiImage Remove="Resources\Images\imgfavorite.png" />
+	  <MauiImage Remove="Resources\Images\imgmenu.png" />
+	  <MauiImage Remove="Resources\Images\imgprofile.png" />
+	  <MauiImage Remove="Resources\Images\imgsearch.png" />
 	  <MauiImage Remove="Resources\Images\NintendoSwitch.png" />
 	  <MauiImage Remove="Resources\Images\Playstation5.png" />
 	  <MauiImage Remove="Resources\Images\XboxSeriesX.png" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\Images\NintendoSwitch.png" />
 	  <None Remove="Resources\Images\Playstation5.png" />
-	  <None Remove="Resources\Images\XboxSeriesX.png" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <EmbeddedResource Include="Resources\Images\NintendoSwitch.png" />
-	  <EmbeddedResource Include="Resources\Images\Playstation5.png" />
-	  <EmbeddedResource Include="Resources\Images\XboxSeriesX.png" />
+	  <MauiAsset Include="Resources\Images\Playstation5.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -81,12 +83,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Models\" />
-	  <Folder Include="Services\" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <MauiXaml Update="Views\ConsolesPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\PaginaDetalhesConsoles.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\PaginaInicial.xaml">
