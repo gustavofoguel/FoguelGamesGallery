@@ -57,23 +57,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiImage Remove="Resources\Images\imgback.png" />
-	  <MauiImage Remove="Resources\Images\imgexplore.png" />
-	  <MauiImage Remove="Resources\Images\imgfavorite.png" />
-	  <MauiImage Remove="Resources\Images\imgmenu.png" />
-	  <MauiImage Remove="Resources\Images\imgprofile.png" />
-	  <MauiImage Remove="Resources\Images\imgsearch.png" />
-	  <MauiImage Remove="Resources\Images\NintendoSwitch.png" />
-	  <MauiImage Remove="Resources\Images\Playstation5.png" />
-	  <MauiImage Remove="Resources\Images\XboxSeriesX.png" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <None Remove="Resources\Images\Playstation5.png" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <MauiAsset Include="Resources\Images\Playstation5.png" />
+	  <None Remove="Resources\Images\imgback.png" />
+	  <None Remove="Resources\Images\imgexplore.png" />
+	  <None Remove="Resources\Images\imgfavorite.png" />
+	  <None Remove="Resources\Images\imgmenu.png" />
+	  <None Remove="Resources\Images\imgprofile.png" />
+	  <None Remove="Resources\Images\imgsearch.png" />
+	  <None Remove="Resources\Images\nintendo.png" />
+	  <None Remove="Resources\Images\playstation.png" />
+	  <None Remove="Resources\Images\xbox.png" />
 	</ItemGroup>
 
 	<ItemGroup>

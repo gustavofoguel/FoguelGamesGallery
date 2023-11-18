@@ -13,7 +13,7 @@
         <Image
             x:Name="imgPlaystation5"
             Opacity="0"
-            Source="Playstation5.png"
+            Source="playstation.png"
             VerticalOptions="Start"
             HorizontalOptions="Center"
             TranslationX="-48"
@@ -25,7 +25,7 @@
         <Image
             x:Name="imgXboxSeriesX"
             Opacity="0"
-            Source="XboxSeriesX.png"
+            Source="xbox.png"
             VerticalOptions="Center"
             HorizontalOptions="Start"
             TranslationX="-100"
@@ -37,7 +37,7 @@
         <Image
             x:Name="imgNintendoSwitch"
             Opacity="0"
-            Source="NintendoSwitch.png"
+            Source="nintendo.png"
             VerticalOptions="Center"
             HorizontalOptions="Center"
             TranslationX="32"

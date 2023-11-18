@@ -16,14 +16,14 @@ namespace FoguelGamesGallery.Services
             {
                 Nome = "Playstation 5",
                 Legenda = "Desenvolvido pela Sony",
-                HeroImage = "Playstation5.png",
+                HeroImage = "playstation.png",
                 Descricao = "O PlayStation 5 (oficialmente abreviado como PS5) é um console de jogos eletrônicos de nona geração, desenvolvido pela Sony Interactive Entertainment. Foi anunciado em outubro de 2018[6] e confirmado em outubro de 2019[7] como o quinto da série PlayStation e sucessor do PlayStation 4. O console foi lançado em 12 de novembro de 2020 na América do Norte, Austrália, Coreia do Sul, Japão, Nova Zelândia e Singapura. E em 11 de dezembro de 2020 foi lançado nas Filipinas.[1] 19 de novembro para o resto do mundo.[8][9] A plataforma foi lançada em duas versões, um sistema com entrada para disco óptico compatível com Blu-ray Ultra HD para suporte a jogos lançados em mídia física ou baixados através da PlayStation Store e uma versão digital de menor custo sem a unidade de disco, utilizando apenas o download digital.",
                 InicioCorDestaque = Color.FromArgb("#353535"),
                 FimCorDestaque = Color.FromArgb("#8d9098"),
                 Images = new()
                 {
                     "https://meups.com.br/wp-content/uploads/2022/04/God-of-War-Ragnarok-PlayStation-Studios-900x503.jpg",
-                    "https://m.media-amazon.com/images/S/aplus-media-library-service-media/9d439e09-a5cf-4582-8b1e-4272586515ff.__CR0,0,970,300_PT0_SX970_V1___.png",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg0BjuEtFQn2AT6_Gj4358O3813_0k_4IGqhEFCSo8U8S_3HLFaZ_XbbSVtIfz3du0EeI&usqp=CAU",
                     "https://image.api.playstation.com/vulcan/ap/rnd/202206/0720/eEczyEMDd2BLa3dtkGJVE9Id.png"
                 }
             },
@@ -31,13 +31,13 @@ namespace FoguelGamesGallery.Services
             {
                 Nome = "Xbox Serie X",
                 Legenda = "Desenvolvido pela Microsoft",
-                HeroImage = "XboxSeriesX.png",
+                HeroImage = "xbox.png",
                 Descricao = "O Xbox Series X e Series S (coletivamente chamados de Xbox Series X/S[a]) são consoles domésticos de jogos eletrônicos desenvolvidos pela Microsoft. É a quarta geração da família de consoles Xbox; foi anunciada pela primeira vez durante a E3 2019 como Project Scarlett. Ambos os consoles foram lançados em 10 de novembro de 2020.",
                 InicioCorDestaque = Color.FromArgb("#0C293d"),
                 FimCorDestaque = Color.FromArgb("#26abe0"),
                 Images = new ()
                 {
-                    "https://m.media-amazon.com/images/I/61D8uzSMHEL._AC_UF1000,1000_QL80_.jpg",
+                    "https://cdn.gearsofwar.com/gearsofwar/sites/9/2020/03/gears-3-horde-5e7282339a645-1024x576.jpg",
                     "https://store-images.s-microsoft.com/image/apps.34314.14094852858730120.8475f7cf-0333-4f77-934d-36aa19e18c42.71453430-eaf2-491a-bdc7-5a92f2e983b0?mode=scale&q=90&h=720&w=1280&background=%23FFFFFF",
                     "https://i0.wp.com/news.xbox.com/pt-br/wp-content/uploads/sites/8/2021/06/Starfield_Inline_Recap.jpg?resize=1200%2C675&ssl=1"
                 }
@@ -46,7 +46,7 @@ namespace FoguelGamesGallery.Services
             {
                 Nome = "Nintendo Switch",
                 Legenda = "Desenvolvido pela Nintendo",
-                HeroImage = "NintendoSwitch.png",
+                HeroImage = "nintendo.png",
                 Descricao = "O Nintendo Switch (ニンテンドースイッチ Nintendō Suitchi?), chamado durante seu desenvolvimento de NX, é um console de videogame híbrido produzido pela empresa Nintendo, tendo sido revelado em 20 de outubro de 2016. Foi lançado oficialmente no dia 3 de março de 2017, e o preço de lançamento é de US$299,99.[3] Na ocasião do lançamento, a Sony e a Microsoft, principais concorrentes da Nintendo, usaram o Twitter para comemorar o novo console.[4] No Brasil, o console foi lançado em 18 de setembro de 2020.[5]",
             InicioCorDestaque = Color.FromArgb("#9d4a40"),
             FimCorDestaque = Color.FromArgb("#cd8026"),
